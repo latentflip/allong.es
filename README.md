@@ -175,9 +175,11 @@ safeFirst(null)
 
 Tap:
 
+`tap(value, fn)` calls `fn` passing it `value` then returns `value`. Here `send('pop')` modifies the array since it is passed by reference.
+
 ```javascript
 var tap = require('allong.es').tap;
-    
+
 tap([1, 2, 3, 4, 5], send('pop'))
   //=> [1, 2, 3, 4]
 ```
